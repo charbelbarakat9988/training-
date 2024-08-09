@@ -1,16 +1,17 @@
 
 
 
+  
+  const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3030;
 
-const express = require('express')
-const app = express()
-const port = 3000
+// your code
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World! hope ur fine ')
 })
 
-app.get('/student', (req, res) => {
-    res.send('Hello student ')
-  }) 
-  app.listen(3000) 
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
